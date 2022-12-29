@@ -15,10 +15,10 @@ const updateCountdown = () => {
     const minutes = Math.floor(difference / 1000 / 60) % 60;
     const seconds = Math.floor(difference / 1000 ) % 60;
 
-    secondsContainer.textContent = seconds;
-    minutesContainer.textContent = minutes;
-    hoursContainer.textContent = hours;
-    daysContainer.textContent = days;
+    secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds;
+    minutesContainer.textContent = minutes < 10 ? '0' + minutes : minutes;
+    hoursContainer.textContent = hours < 10 ? '0' + hours : hours;
+    daysContainer.textContent = days < 10 ? '0' + days : days;
 }
 
 setInterval(updateCountdown, 1000);
